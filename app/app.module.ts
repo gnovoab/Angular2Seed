@@ -6,6 +6,7 @@ import { routing } from './app.routing';
 import {AppComponent} from "./components/app.component";
 import {FormsModule} from "@angular/forms";
 import {WelcomeComponent} from "./components/home/welcome.component";
+import {DashboardComponent} from "./components/dashboard/dashboard.component";
 
 /* Feature Modules */
 // import { ProductModule } from './products/product.module';
@@ -20,7 +21,8 @@ import {WelcomeComponent} from "./components/home/welcome.component";
     ],
     declarations: [
         AppComponent,
-        WelcomeComponent
+        WelcomeComponent,
+        DashboardComponent
     ],
     bootstrap: [ AppComponent ]
 })
