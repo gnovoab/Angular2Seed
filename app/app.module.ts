@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import {routing, routedComponents} from './app.routing';
 import {AppComponent} from "./components/app.component";
 import {FormsModule} from "@angular/forms";
+import {UserService} from "./shared/user.service";
+import {LoggedInGuard} from "./shared/LoggedInGuard";
 
 @NgModule({
     imports: [
@@ -14,6 +16,9 @@ import {FormsModule} from "@angular/forms";
         routing
     ],
     declarations: [AppComponent, routedComponents],
+    providers: [
+        UserService, LoggedInGuard
+    ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }
