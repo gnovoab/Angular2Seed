@@ -1,25 +1,28 @@
-<div class="container" >
-    <div class="title">
-        Hi
-    </div>
-    <div class="panel-body">
-        <div class="row">
-            <div class="input-field col s12">
-                <label>email:</label> <input #email />
+<div class="container">
+    <form id="loginForm" role="form" ng-submit="vm.login()">
+        <header>
+            <div id="logo" class="text-center">
+               World Cup 2018 Admin
             </div>
+        </header>
+        <div class="login-input input-group input-group-sm">
+            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+            <input required #email class="form-control" placeholder="Username">
         </div>
 
-        <div class="row">
-            <div class="input-field col s12">
-                <label>password:</label> <input #password  type="password"/>
-            </div>
+        <div id="login-input password-input" class="input-group input-group-sm">
+            <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+            <input required #password  type="password" class="form-control" placeholder="Password">
         </div>
-
-        <span>{{errorMsg}}</span>
-        <button (click)="login(email.value, password.value)"
-                class="btn waves-effect waves-light"
-                type="submit" name="action">Login</button>
-    </div>
+        <div id="login-button-container" class="input-group text-center">
+            <button class="btn btn-default btn-sm" type="submit" (click)="login(email.value, password.value)">Login</button>
+        </div>
+    </form>
 </div>
+
+
+
+
+
 
 

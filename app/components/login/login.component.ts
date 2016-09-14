@@ -4,7 +4,10 @@ import {User} from "./user";
 import {Router} from "@angular/router";
 
 @Component({
-    templateUrl: 'app/components/login/login.component.html'
+    // moduleId: module.id,
+    selector: 'my-login',
+    templateUrl: 'app/components/login/login.component.html',
+    styleUrls: ['app/components/login/login.component.css']
 })
 
 export class LoginComponent implements OnInit{
@@ -33,4 +36,13 @@ export class LoginComponent implements OnInit{
 }
 
 
+/*
 
+ @Component({
+
+
+ templateUrl: 'app/components/login/login.component.html',
+
+ })
+
+ */

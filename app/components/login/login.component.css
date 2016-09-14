@@ -1,0 +1,45 @@
+/* ==========================================================
+   ===						Login           			  ===
+   ========================================================== */
+
+form header #logo {
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+form header #logo span {
+    color: #cddf69;
+}
+
+#loginForm {
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#loginForm header
+{
+    margin-bottom: 0px;
+}
+
+#loginForm .login-input{
+    margin: 5px 0;
+}
+
+#loginForm #login-button-container {
+    margin: auto;
+    margin-top: 10px;
+}
+
+#add-stroke-btn{
+    padding-top:15px;
+}
+.send-data-btn{
+    float:right;
+    margin-top:15px;
+    margin-right:20px;
+}
+
+.right-allign {
+    float: right;
+}
