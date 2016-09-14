@@ -1,10 +1,30 @@
-<!--<h1>{{pageTitle}}</h1>-->
-<!--<nav>-->
-    <!--<a routerLink="/welcome" routerLinkActive="active">Welcome</a>-->
-    <!--<a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>-->
-<!--</nav>-->
-<!--<router-outlet></router-outlet>-->
 
+
+<header>
+
+    <nav *ngIf="userService.isLoggedIn()" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <div id="logo">
+                        WC 2018
+                    </div>
+                </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="dashboard">Dashboard</a></li>
+                <li><a href="teams">Teams</a></li>
+                <li><a href="players">Players</a></li>
+                <li><a href="fixtures">Fixtures</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span id="username">user.username </span><span class="caret"></span></a></li>
+                <li><a href="#" (click)="userService.logout()"><i class="fa fa-sign-out"></i> Log Out </a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
 
 <div class="container body-container">
