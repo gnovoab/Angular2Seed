@@ -4,14 +4,12 @@ import {Component, OnInit} from "@angular/core";
 import {Team} from "./team";
 import {Router} from "@angular/router";
 import {TeamService} from "./team.service";
-import {TeamFilterPipe} from "./team-filter.pipe";
 
 /**
  * Team class
  */
 @Component({
-    templateUrl: 'app/components/teams/teams.component.html',
-    pipes: [TeamFilterPipe]
+    templateUrl: 'app/components/teams/teams.component.html'
 })
 export class TeamsComponent implements OnInit{
 
