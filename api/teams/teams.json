@@ -1,0 +1,129 @@
+[{
+  "code": "BRA",
+  "name": "Brasil",
+  "group": "A"
+}, {
+  "code": "MEX",
+  "name": "Mexico",
+  "group": "A"
+}, {
+  "code": "CRO",
+  "name": "Croacia",
+  "group": "A"
+}, {
+  "code": "CAM",
+  "name": "Cameroon",
+  "group": "A"
+}, {
+  "code": "NED",
+  "name": "Netherlands",
+  "group": "B"
+}, {
+  "code": "ESP",
+  "name": "Spain",
+  "group": "B"
+}, {
+  "code": "CHI",
+  "name": "Chile",
+  "group": "B"
+}, {
+  "code": "AUS",
+  "name": "Australia",
+  "group": "B"
+}, {
+  "code": "COL",
+  "name": "Colombia",
+  "group": "C"
+}, {
+  "code": "JAP",
+  "name": "Japan",
+  "group": "C"
+}, {
+  "code": "CIV",
+  "name": "Ivory Coast",
+  "group": "C"
+}, {
+  "code": "GRE",
+  "name": "Greece",
+  "group": "C"
+}, {
+  "code": "CRC",
+  "name": "Costa Rica",
+  "group": "D"
+}, {
+  "code": "URU",
+  "name": "Uruguay",
+  "group": "D"
+}, {
+  "code": "ITA",
+  "name": "Italy",
+  "group": "D"
+}, {
+  "code": "ENG",
+  "name": "England",
+  "group": "D"
+}, {
+  "code": "FRA",
+  "name": "France",
+  "group": "E"
+}, {
+  "code": "SWI",
+  "name": "Switzerland",
+  "group": "E"
+}, {
+  "code": "ECU",
+  "name": "Ecuador",
+  "group": "E"
+}, {
+  "code": "HON",
+  "name": "Honduras",
+  "group": "E"
+}, {
+  "code": "ARG",
+  "name": "Argentina",
+  "group": "F"
+}, {
+  "code": "NIG",
+  "name": "Nigeria",
+  "group": "F"
+}, {
+  "code": "IRN",
+  "name": "Iran",
+  "group": "F"
+}, {
+  "code": "BOS",
+  "name": "Bosnia and Herzegovina",
+  "group": "F"
+}, {
+  "code": "GER",
+  "name": "Germany",
+  "group": "G"
+}, {
+  "code": "USA",
+  "name": "Unite States",
+  "group": "G"
+}, {
+  "code": "POR",
+  "name": "Portugal",
+  "group": "G"
+}, {
+  "code": "GHA",
+  "name": "Ghana",
+  "group": "G"
+}, {
+  "code": "BEL",
+  "name": "Belgium",
+  "group": "H"
+}, {
+  "code": "ALG",
+  "name": "Algeria",
+  "group": "H"
+}, {
+  "code": "RUS",
+  "name": "Russia",
+  "group": "H"
+}, {
+  "code": "KOR",
+  "name": "South Korea",
+  "group": "H"
+}]

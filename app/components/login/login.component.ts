@@ -1,48 +1,48 @@
-import {Component, OnInit} from '@angular/core';
+
+//Imports
+import {Component, OnInit} from "@angular/core";
 import {UserService} from "../../shared/user.service";
-import {User} from "./user";
 import {Router} from "@angular/router";
 
+/**
+ * Login component
+ */
 @Component({
     // moduleId: module.id,
     selector: 'my-login',
     templateUrl: 'app/components/login/login.component.html',
     styleUrls: ['app/components/login/login.component.css']
 })
-
 export class LoginComponent implements OnInit{
 
+    //Fields
+    error: any;
+
+    /**
+     * Constructor
+     * @param userService
+     * @param router
+     */
     constructor(private userService: UserService, private router: Router) {}
 
-    ngOnInit(): void {
-    }
+    /**
+     * Init
+     */
+    ngOnInit(): void {}
 
-    login(email, password) {
+
+    /**
+     * Login user
+     * @param email
+     * @param password
+     */
+    login(email: string, password: string) {
         this.userService.login(email, password)
             .then(myData => {
                 if(this.userService.isLoggedIn()){
-
                     this.router.navigate(['dashboard']);
-
-                    //foward to dashboard
                 }
-
-            });
-
-        // this.userService.login(this.user).subscribe(
-       //     accessToken => this.accessToken = accessToken,
-       //     error =>  this.errorMsg = <any>error);
+            })
+            .catch(error => this.error = error);
     }
 }
-
-
-/*
-
- @Component({
-
-
- templateUrl: 'app/components/login/login.component.html',
-
- })
-
- */

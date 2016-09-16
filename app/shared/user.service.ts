@@ -1,18 +1,32 @@
 // user.service.ts
-import { Injectable } from '@angular/core';
-import {Http, Headers, URLSearchParams} from '@angular/http';
-import 'rxjs/add/operator/toPromise';
+import {Injectable} from "@angular/core";
+import {Http} from "@angular/http";
+import "rxjs/add/operator/toPromise";
 
+/**
+ * User Service Class
+ */
 @Injectable()
 export class UserService {
+
+    //Fields
     private loginUrl = 'api/user/user.json';
     private loggedIn = false;
 
-
+    /**
+     * Constructor
+     * @param http
+     */
     constructor(private http: Http) {
-        this.loggedIn = !!localStorage.getItem('auth_token');
+        this.loggedIn = !!localStorage.getItem('access_token');
     }
 
+    /**
+     * Login user
+     * @param email
+     * @param password
+     * @returns {Promise<TResult>}
+     */
     login(email: string, password: string): Promise<Boolean> {
 
         return this.http
@@ -29,74 +43,25 @@ export class UserService {
     }
 
 
-    private handleError(error: any): Promise<any> {
-        console.error('An error occurred', error); // for demo purposes only
-        return Promise.reject(error.message || error);
-    }
-
-
-
-    //
-    // login(email, password) {
-    //     let headers = new Headers();
-    //     headers.append('Content-Type', 'application/json');
-    //
-    //     return this.http
-    //         .post(
-    //             '/login',
-    //             JSON.stringify({ email, password }),
-    //             { headers }
-    //         )
-    //         .map(res => res.json())
-    //         .map((res) => {
-    //             if (res.success) {
-    //                 localStorage.setItem('auth_token', res.auth_token);
-    //                 this.loggedIn = true;
-    //             }
-    //
-    //             return res.success;
-    //         });
-    // }
-    //
-    // // login2(username, password) {
-    // //     let headers = new Headers();
-    // //     headers.append('Content-Type', 'application/x-www-form-urlencoded');
-    // //     headers.append("Authorization", 'Basic ' + btoa(username + ":" + password));
-    // //
-    // //     // Parameters obj-
-    // //     let params: URLSearchParams = new URLSearchParams();
-    // //     params.set('username', username);
-    // //     params.set('password', password);
-    // //     params.set('grant_type', 'password');
-    // //
-    // //
-    // //     return this.http.get('/login', {
-    // //         headers: headers,
-    // //         search: params
-    // //     })
-    // //         .map(res => res.json())
-    // //         .map((res) => {
-    // //             if (res.success) {
-    // //                 localStorage.setItem('auth_token', res.auth_token);
-    // //                 this.loggedIn = true;
-    // //             }
-    // //
-    // //             return res.success;
-    // //         });
-    // //
-    // //
-    // //
-    // //
-    // // }
-
-
-    logout() {
+    /**
+     * Logout user
+     */
+    logout():void {
         localStorage.removeItem('access_token');
         this.loggedIn = false;
     }
 
-    isLoggedIn() {
+    /**
+     * Verify if user is logged in
+     * @returns {boolean}
+     */
+    isLoggedIn():boolean {
         return this.loggedIn;
+    }
+
+    private handleError(error: any): Promise<any> {
+        console.error('An error occurred', error); // for demo purposes only
+        return Promise.reject(error.message || error);
     }
 
 }
